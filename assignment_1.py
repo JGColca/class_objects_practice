@@ -28,7 +28,7 @@ class Person(object):
 
 #Function for Printing Friends of Object Person
     def print_friends(self):
-        print (self.friends)
+        print (f'This is a list of {self.name}\'s friends : {self.friends}')
 
  #Function for adding Friends of Object Person   
     def add_friend(self, friend_name):
@@ -36,23 +36,23 @@ class Person(object):
 
  #Function for Number of Friends of Object Person   
     def num_friends(self):
-        print (len(self.friends))
+        print (f'This is how many friends {self.name} has: {len(self.friends)}')
     
 #Function for Printing Greeting Count of Object Person
     def print_greeting_count(self):
-        print (self.greeting_count)
+        print (f'This is how many people {self.name} has greeted: {self.greeting_count}')
         
 #Function for Printing Number of Unique People Greeted of Object Person    
     def num_unique_people_greeted(self):
-        print (self.unique_greeting_count)
+        print (f'This is how many unique people {self.name} has greeted: {self.unique_greeting_count}')
 
 #Function for List of Unique Greets of Object Person    
     def print_unique_greeting_list(self):
-        print (self.unique_friends)
+        print (f'This is a list of {self.name}\'s unique people greeted : {self.unique_friends}')
 
 #Function for Object information when Class is called  
     def __repr__(self):
-        return (self.name, self.email, self.phone)
+        return (f'This is a return of atrributes when a class is called: {self.name}, {self.email}, {self.phone}')
         
 #People
 sonny = Person("Sonny", "sonny@hotmail.com", "438-485-4948")
@@ -125,13 +125,13 @@ class Vehicle:
     
 #define function for printing vehicle information
     def print_info(self):
-        print (self.year, self.make, self.model)
+        print (f'This is printed using print_info function: {self.year}, {self.make}, {self.model}')
 
 #Provide car attributes of vehicle class
 car = Vehicle("Toyota", "Camry", "2016")
 
 #Print attribute information using "." notation
-print (car.make, car.model, car.year)
+print (f'This is printed using \".\" notation for each attribute outside of a function: {car.make}, {car.model}, {car.year}')
 
 #Print car attributes using function for printing vehicle informations
 car.print_info()
